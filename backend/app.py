@@ -1,4 +1,5 @@
-from flask import Flask
+from flask import Flask, render_template, request
+import sqlite3
 
 app = Flask(__name__)
 
@@ -13,6 +14,24 @@ def login():
 @app.route("/dashboard")
 def dashboard():
     return "Dashboard Page"
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        conn = get_db()
+        conn.execute(
+            'INSERT INTO users (username, password) VALUES (?, ?)',
+            (username, password)
+        )
+        conn.commit()
+        conn.close()
+
+        return "Registered successfully"
+
+    return render_template('register.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

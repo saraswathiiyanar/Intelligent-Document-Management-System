@@ -1,9 +1,5 @@
 import sqlite3
 
-conn = sqlite3.connect('database.db')
-
-rows = conn.execute("SELECT * FROM users").fetchall()
-
-print(rows)
-
+conn = sqlite3.connect("database.db")
+print(conn.execute("SELECT * FROM users").fetchall())
 conn.close()

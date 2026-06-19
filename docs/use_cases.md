@@ -1,44 +1,36 @@
 # Use Cases - Intelligent Document Management System
 
 ## 1. User Registration
-- User system la new account create pannalaam
-- Name, email, password enter panni register aagalaam
-- Data database la store aagum
+Users can create an account using email and password. The data will be stored securely in the database.
 
 ---
 
 ## 2. User Login
-- Registered user login pannalaam
-- Email & password verify aagum
-- Success na dashboard ku redirect aagum
+Registered users can log in using their credentials and access the dashboard.
 
 ---
 
 ## 3. Document Upload
-- User documents upload pannalaam (PDF, DOCX, Images)
-- File system la save aagum
-- Metadata database la store aagum
+Users can upload documents such as PDF, DOCX, and images. Uploaded files are stored in the system.
 
 ---
 
-## 4. Document View
-- Uploaded documents list ah view panna mudiyum
-- File open/download pannalaam
+## 4. View Documents
+Users can view and download their uploaded documents anytime.
 
 ---
 
-## 5. Document Search
-- User document name / keyword search panna mudiyum
-- Relevant results display aagum
+## 5. Search Documents
+Users can search documents using keywords or file names to quickly find required files.
 
 ---
 
-## 6. Delete Document
-- Unwanted documents remove pannalaam
-- Database + storage la irundhu delete aagum
+## 6. Delete Documents
+Users can delete unwanted documents from the system permanently.
 
 ---
 
-## 7. Basic AI Feature (Future Scope)
-- Document content summarize pannalaam
-- OCR use panni text extract pannalaam
+## 7. Future Enhancement (AI Features)
+- Automatic document summarization
+- OCR (text extraction from images and scanned documents)
+- Smart tagging of documents

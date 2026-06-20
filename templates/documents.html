@@ -1,42 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Documents - IDMS</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Documents</title>
 </head>
 <body>
 
-    <h1>Documents</h1>
+    <h2>Uploaded Documents</h2>
 
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Document Name</th>
-            <th>Action</th>
-        </tr>
-
-        <tr>
-            <td>1</td>
-            <td>Sample_Document.pdf</td>
-            <td>
-                <button>View</button>
-                <button>Delete</button>
-            </td>
-        </tr>
-
-        <tr>
-            <td>2</td>
-            <td>Project_Report.docx</td>
-            <td>
-                <button>View</button>
-                <button>Delete</button>
-            </td>
-        </tr>
-    </table>
-
-    <br>
-
-    <a href="{{ url_for('main.dashboard') }}">Back to Dashboard</a>
+    {% for file in files %}
+        <p>
+            {{ file }}
+            <a href="{{ url_for('delete_file', filename=file) }}">
+                Delete
+            </a>
+        </p>
+    {% endfor %}
 
 </body>
 </html>

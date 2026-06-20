@@ -14,7 +14,7 @@ def get_db():
 
 @app.route('/')
 def home():
-    return "IDMS Running"
+    return redirect('/login')
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -59,8 +59,37 @@ def login():
 
 @app.route('/dashboard')
 def dashboard():
-    return "Dashboard Page"
+    return render_template('dashboard.html')
 
+@app.route('/upload', methods=['GET', 'POST'])
+def upload():
+    if request.method == 'POST':
+        file = request.files['document']
+
+        if file:
+            os.makedirs("uploads", exist_ok=True)
+            file.save(os.path.join("uploads", file.filename))
+            return "File Uploaded Successfully"
+
+    return render_template('upload.html')
+
+@app.route('/documents')
+def documents():
+    files = os.listdir("uploads")
+    return render_template('documents.html', files=files)
+
+@app.route('/delete/<filename>')
+def delete_file(filename):
+    file_path = os.path.join("uploads", filename)
+
+    if os.path.exists(file_path):
+        os.remove(file_path)
+
+    return redirect('/documents')
+
+@app.route('/logout')
+def logout():
+    return redirect('/login')
 
 if __name__ == "__main__":
     app.run(debug=True)

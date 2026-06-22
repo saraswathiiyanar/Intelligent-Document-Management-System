@@ -1,15 +1,23 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(".."))
 from flask import Flask, render_template, request
 import sqlite3
 
 app = Flask(__name__)
 
+from ocr.ocr_engine import extract_text 
+
+app = Flask(__name__, template_folder="../templates")
+
 @app.route("/")
 def home():
-    return "Intelligent Document Management System (IDMS)"
+   return render_template("index.html")
 
 @app.route("/login")
 def login():
-    return "Login Page"
+    return render_template("login.html")
 
 @app.route("/dashboard")
 def dashboard():

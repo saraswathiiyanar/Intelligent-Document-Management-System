@@ -1,6 +1,6 @@
 ## 🤖 OCR Feature
 
-## OCR Meaning
+### OCR Meaning
 
 The Intelligent Document Management System uses Optical Character Recognition (OCR) to extract text from uploaded scanned documents, images, and PDF files.
 
@@ -12,13 +12,13 @@ The Intelligent Document Management System uses Optical Character Recognition (O
 4. Extracted text is stored for document search and categorization.
 5. Users can search documents using words available inside the document.
 
-## Text Extraction
+### Text Extraction
 The extracted text is stored and used to identify document content.
 
-## Search Use
+### Search Use
 Users can search documents using words found inside the extracted text.
 
-## Automatic Categorization Use
+### Automatic Categorization Use
 The extracted text helps the system automatically categorize documents such as academic, financial, legal, or medical documents.
 
 ### OCR Supported Files

@@ -7,8 +7,22 @@
 
     <h2>Uploaded Documents</h2>
 
+    <select id="categoryFilter" onchange="filterDocuments()">
+    <option value="All">All Categories</option>
+    <option value="Invoice">Invoice</option>
+    <option value="Resume">Resume</option>
+    <option value="Report">Report</option>
+    <option value="Certificate">Certificate</option>
+    <option value="Letter">Letter</option>
+    <option value="Other">Other</option>
+</select>
+
+<br><br>
+
+    <div id="documentList">
+
     {% for file in files %}
-        <p>
+        <p data-category="Other">
             {{ file }}
             <a href="{{ url_for('delete_file', filename=file) }}">
                 Delete
@@ -16,5 +30,23 @@
         </p>
     {% endfor %}
 
+    </div>
+
+    <script>
+function filterDocuments() {
+    const selectedCategory = document.getElementById("categoryFilter").value;
+    const documents = document.querySelectorAll("#documentList p");
+
+    documents.forEach((document) => {
+        const category = document.getAttribute("data-category");
+
+        if (selectedCategory === "All" || category === selectedCategory) {
+            document.style.display = "block";
+        } else {
+            document.style.display = "none";
+        }
+    });
+}
+</script>
 </body>
 </html>

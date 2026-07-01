@@ -1,46 +1,57 @@
-# Week 2 Report - Intelligent Document Management System
+# Week 2 & Week 3 Report
+
+## Project Title
+
+**Intelligent Document Management System (IDMS)**
 
 ## Objective
 
-To understand Optical Character Recognition (OCR), document categorization, and document processing concepts used in the Intelligent Document Management System.
+To design the overall architecture of the Intelligent Document Management System and document the core modules, APIs, OCR workflow, search functionality, and security features.
 
-## Activities Completed
+## Work Completed
 
-### 1. Optical Character Recognition (OCR)
+### System Design
 
-- Studied the fundamentals of OCR technology.
-- Understood how OCR extracts text from scanned documents and images.
-- Explored the role of OCR in document digitization.
+* Designed the overall system architecture.
+* Prepared the application design flow.
+* Created the Entity Relationship (ER) Diagram for database modeling.
 
-### 2. Document Categorization
+### API Documentation
 
-- Studied different document categorization techniques.
-- Understood how documents are classified based on their type and content.
+* Documented REST API endpoints for authentication, document management, OCR processing, and search operations.
+* Defined API request and response structures.
 
-### 3. Document Processing
+### Document Management
 
-- Analyzed the document processing workflow.
-- Understood how documents are uploaded, processed, and organized within the system.
+* Planned document categorization for efficient organization and retrieval.
+* Documented the document upload and management workflow.
 
-### 4. OCR Workflow Analysis
+### OCR Module
 
-- Explored how OCR integrates with the document management process.
-- Understood the flow of text extraction and document handling.
+* Documented the OCR feature for extracting text from uploaded documents.
+* Defined the OCR processing workflow and integration approach.
 
-### 5. System Understanding
+### Search Module
 
-- Studied the overall workflow of the Intelligent Document Management System.
-- Explored the key functional modules involved in document management.
+* Documented the OCR-based search functionality.
+* Planned keyword-based document retrieval using extracted text.
 
-## Concepts Learned
+### Security
 
-- Optical Character Recognition (OCR)
-- Document Categorization
-- Document Processing
-- OCR Workflow
-- Intelligent Document Management System Workflow
+* Documented OCR search security features.
+* Defined access control and secure document search mechanisms.
+
+## Skills Learned
+
+* ER Diagram Design
+* Database Modeling
+* REST API Documentation
+* OCR Workflow Design
+* Search Feature Design
+* Security Feature Design
+* Technical Documentation
 
 ## Outcome
 
-Successfully gained an understanding of OCR, document categorization, and document processing concepts. Improved knowledge of the Intelligent Document Management System workflow and the role of OCR in efficient document management.
-```
+Successfully completed the system design and technical documentation for the Intelligent Document Management System, including architecture, API documentation, ER diagram, OCR workflow, search functionality, document categorization, and security features. These documents provide a strong foundation for the implementation phase of the project.
+
